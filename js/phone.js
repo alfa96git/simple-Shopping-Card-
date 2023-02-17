@@ -1,8 +1,15 @@
 
 // Calculate Plus Button
 document.getElementById('btn-iPhone-plus').addEventListener('click', function () {
+
+    const updatedFieldValue = getCasePreviousValueById('iPhone-number-field', true);
+
+
     
-    getCasePreviousValueById('iPhone-number-field', true);
+    // const caseTotalPrice = updatedFieldValue * 1200;
+    // document.getElementById('iPhone-total-price').innerText = caseTotalPrice;
+
+    totalFieldPrice(updatedFieldValue, 'case-total-price');
 
 });
 
@@ -10,6 +17,7 @@ document.getElementById('btn-iPhone-plus').addEventListener('click', function ()
 // Calculate Minus Button
 document.getElementById('btn-iPhone-minus').addEventListener('click', function () {
 
-    getCasePreviousValueById('iPhone-number-field', false);
+    const updatedFieldValue = getCasePreviousValueById('iPhone-number-field', false);
 
+    totalFieldPrice(updatedFieldValue, 'case-total-price');
 });
